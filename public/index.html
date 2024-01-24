@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="clickMe">Click Me</button>
+  <script>
+
+    document.querySelector("#clickMe").addEventListener("click",async()=>{
+      console.log("CLicked");
+      let a =await fetch("/clicked",{method:"POST"});
+      console.log("Posted Successfully")
+    })
+    
+  </script>
+</body>
+</html>
